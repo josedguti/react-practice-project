@@ -7,7 +7,7 @@ const UsersList = (props) => {
     <Card className={styles.users}>
       <ul>
         {props.users.map((user) => (
-          <li key={user.id}>
+          <li key={user.id} onClick={() => props.deleteHandler(user.id)}>
             {user.name} ({user.age} years old)
           </li>
         ))}
